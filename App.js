@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 8000
+const port = 7000
 const morgan = require('morgan')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+
+const RankRouter = require('./router/rank')
 
 app.use(bodyParser.json())
 app.use(morgan('dev'))
@@ -19,6 +21,8 @@ app.use(
 app.get('/', (req, res) => {
     res.status(200).send('Success')
 })
+
+app.use('/rank', RankRouter)
 
 app.set('port', port)
 
