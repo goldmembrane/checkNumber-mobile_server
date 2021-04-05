@@ -14,12 +14,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Rank.init({
-    user_id: DataTypes.INTEGER,
     username: DataTypes.TEXT,
     score: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Rank',
+    timestamps: false,
   });
   return Rank;
 };
