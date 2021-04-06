@@ -20,7 +20,7 @@ module.exports = {
     },
     get: (req, res) => {
         Rank.findAll({
-            limit: 8,
+            limit: 5,
             order: [['score', 'DESC']],
         })
         .then((data) => {
