@@ -3,11 +3,9 @@ const { Rank }  = require('../models');
 module.exports = {
     post: (req, res) => 
     {
-        let username = req.body.username;
         let score = req.body.score;
 
         Rank.create({
-            username: username,
             score: score,
         })
         .then((data) => {

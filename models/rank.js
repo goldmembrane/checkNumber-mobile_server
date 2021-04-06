@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Rank.init({
-    username: DataTypes.TEXT,
     score: DataTypes.INTEGER
   }, {
     sequelize,
